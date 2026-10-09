@@ -1,0 +1,59 @@
+algorithms: [B1, B2, B3, B4]
+scenarios: [small, medium]
+seeds: [0, 1, 2]
+path_candidates: 3
+path_gain_weight: 0.25
+speed_scale: 1.0
+corner_speed: 2.0
+n_reserve: 5
+profile_search_slots: 2000
+position_tolerance: 1.0e-7
+power_bisections: 48
+power_margin: 1.0e-8
+b2:
+  power_safety_factor: 1.2
+b4:
+  cruise_speeds_mps: [8.0, 10.0, 12.0, 15.0]
+  max_restarts: 3
+  search_seed: 0
+  finalization_reserve_s: 45.0
+  refinement_min_remaining_s: 30.0
+  corridor_margin_m: 0.05
+  service_margin_m: 0.05
+  speed_margin_mps: 0.02
+  acceleration_margin_mps2: 0.02
+  max_iterations: 20
+  max_uav_rounds: 2
+  relative_improvement: 0.001
+  time_limit_s: 120.0
+  replay_reserve_s: 40.0
+  stop_margin_s: 2.0
+  solver: CLARABEL
+  solver_tolerance: 1.0e-8
+  trust_accel: 0.5
+  proximal_weight: 1.0
+  gradient_step: 1.0e-4
+  backtracking_steps: 8
+  slsqp_ftol: 1.0e-7
+reference:
+  baseline_instances: true
+  seeds: [0, 1]
+  overrides:
+    name: small_reference
+    U: 1
+    K_u: 1
+    T: 40.0
+  source_task: 0
+  endpoint_rule: acquisition_to_followup_centers
+  max_combinations: 1000000
+  path_candidates: 3
+  speed_scales: [1.0, 0.75]
+  segment_subdivisions: 2
+  request_rules: [edf, fcfs]
+  reduced:
+    path_candidates: 1
+    speed_scales: [1.0]
+    segment_subdivisions: 1
+    visit_delays: [0]
+    locations: [0, 1, 2]
+    request_rules: [edf, fcfs]

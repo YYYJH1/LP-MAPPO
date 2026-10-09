@@ -1,0 +1,5 @@
+-r requirements.txt
+transformers==5.17.0
+peft==0.21.0
+safetensors==0.8.0
+vllm==0.30.0

@@ -1,0 +1,12 @@
+guard_nodes: 8
+M_eval: 65
+los_scan: 128
+quad_epsabs: 1.0e-6
+quad_epsrel: 1.0e-8
+interval_budget: 128
+integral_subdivisions: 16
+interval_relative_pad: 1.0e-12
+epsilon_num: 1.0e-7
+epsilon_phys: 1.0
+projection_iterations: 300
+projection_tolerance: 1.0e-8
