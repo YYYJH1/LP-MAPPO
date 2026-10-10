@@ -1,6 +1,6 @@
 """Train a MARL policy: MAPPO, which LP-MAPPO uses, or one of the baselines IPPO, HAPPO, CoPPO and A2PO.
 
-  CUDA_VISIBLE_DEVICES=0 python scripts/train_executor.py --algorithm mappo --seed 42 --output-dir data/checkpoints/S2_mappo_s42
+  CUDA_VISIBLE_DEVICES=0 python scripts/train_policy.py --algorithm mappo --seed 42 --output-dir data/checkpoints/S2_mappo_s42
 
 Training uses the train and monitor splits in data/instances, 192 iterations of 64 episodes, one GPU and 12 CPU
 workers. scripts/evaluate.py reads the MAPPO policies from data/checkpoints/S2_mappo_s<seed>.

@@ -38,7 +38,7 @@ done
 
 # MAPPO policies (one GPU per run); the baselines use --algorithm ippo, happo, coppo or a2po
 for s in 42 43 44 45 46; do
-  python scripts/train_executor.py --algorithm mappo --seed $s --output-dir data/checkpoints/S2_mappo_s$s
+  python scripts/train_policy.py --algorithm mappo --seed $s --output-dir data/checkpoints/S2_mappo_s$s
 done
 
 # planner fine-tuning

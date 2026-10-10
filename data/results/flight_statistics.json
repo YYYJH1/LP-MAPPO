@@ -1,5 +1,5 @@
 {
- "time_by_state_uav_s_per_episode": {
+ "time_by_state_s_per_episode": {
   "corridor_fast": {
    "LP-MAPPO": 97.77018229166673,
    "CoPPO": 285.1902343750001
@@ -29,7 +29,7 @@
    "CoPPO": 96.0
   }
  },
- "total_uav_s_per_episode": {
+ "total_time_s_per_episode": {
   "LP-MAPPO": 1598.2968750000007,
   "CoPPO": 1598.2968749999995
  },

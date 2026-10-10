@@ -52,7 +52,7 @@ def main():
     p.add_argument('--plans',help='plans.jsonl (default: <data-root>/plans/<split>/s<seed>/plans.jsonl)')
     p.add_argument('--out',help='output directory (default: <runs-root>/eval/<split>/K<1|10>/s<seed>/sh<shard-index>)')
     p.add_argument('--workers',type=int,default=6); p.add_argument('--shards',type=int,default=1); p.add_argument('--shard-index',type=int,default=0)
-    p.add_argument('--mappo-seeds',type=int,nargs='+',choices=c.MAPPOS,help='subset of MAPPO executor seeds (default: all five)')
+    p.add_argument('--mappo-seeds',type=int,nargs='+',choices=c.MAPPOS,help='subset of MAPPO policy seeds (default: all five)')
     p.add_argument('--instances',nargs='+',help='subset of instance keys, e.g. test_1400000 (default: all)')
     c.add_path_args(p); a=c.configure(p.parse_args())
     a.K=1 if a.J==0 else a.J

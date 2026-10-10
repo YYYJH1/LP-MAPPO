@@ -1,7 +1,7 @@
 {
  "instance": "test_1400039",
  "planner_seed": 42,
- "executor_seed": 42,
+ "policy_seed": 42,
  "action_seed": 1010039,
  "nodes": {
   "N1": [
